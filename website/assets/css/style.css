@@ -1,15 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #bdbdbd;
 }
 
 #tagline .text-position {
-    top: 30%;
+    top: 35%;
+}
+
+#tagline .text-position .title,
+#tagline .text-position .subtitle {
+    margin: 0 3vw;
 }
 
 #tagline .text-position .title {
-    font-size: 8rem;
+    font-size: 8vw;
 }
 
 #tagline .text-position .subtitle {
-    font-size: 5rem;
+    font-size: 5vw;
 }
