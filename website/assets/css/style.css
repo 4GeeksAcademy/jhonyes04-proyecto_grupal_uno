@@ -2,14 +2,39 @@ body {
     background: #bdbdbd;
 }
 
-#tagline .text-position {
-    top: 30%;
+#tagline > div {
+    top: 4vw;
 }
 
-#tagline .text-position .title {
-    font-size: 8rem;
+#tagline > div h1,
+#tagline > div h2 {
+    margin: 1vw 3vw;
+    animation: showtext 1.5s ease-out alternate forwards;
+    opacity: 0;
 }
 
-#tagline .text-position .subtitle {
-    font-size: 5rem;
+#tagline > div h1 {
+    --font-size-final: 8vw;
+    animation-delay: 0.5s;
+}
+
+#tagline > div h2 {
+    --font-size-final: 5vw;
+    animation-delay: 1.5s;
+}
+
+@keyframes showtext {
+    0% {
+        opacity: 0;
+        font-size: 0;
+        border-radius: 50px;
+        transform: translateZ(4vw);
+    }
+
+    100% {
+        opacity: 1;
+        font-size: var(--font-size-final);
+        border-radius: 0;
+        transform: translateZ(0);
+    }
 }
