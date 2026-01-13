@@ -1,3 +1,8 @@
+/* Modificado por: Juan Manuel */
+:root {
+    --navbar-height: 56px;
+}
+
 body {
     background: #bdbdbd;
 }
@@ -6,11 +11,17 @@ body {
     top: 4vw;
 }
 
+#tagline > img {
+    width: 100%;
+    max-height: calc(100vh - var(--navbar-height));
+}
+
 #tagline > div h1,
 #tagline > div h2 {
     margin: 1vw 3vw;
     animation: showtext 1.5s ease-out alternate forwards;
     opacity: 0;
+    z-index: 10;
 }
 
 #tagline > div h1 {
@@ -28,13 +39,13 @@ body {
         opacity: 0;
         font-size: 0;
         border-radius: 50px;
-        transform: translateZ(4vw);
+        transform: translateZ(0) scale(0.5);
     }
 
     100% {
         opacity: 1;
         font-size: var(--font-size-final);
         border-radius: 0;
-        transform: translateZ(0);
+        transform: translateZ(1) scale(1);
     }
 }
