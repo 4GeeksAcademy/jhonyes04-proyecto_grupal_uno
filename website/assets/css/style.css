@@ -1,9 +1,19 @@
+/* Modificado por: Juan Manuel */
+:root {
+    --navbar-height: 56px;
+}
+
 body {
     background: #bdbdbd;
 }
 
 #tagline > div {
     top: 4vw;
+}
+
+#tagline > img {
+    width: 100%;
+    max-height: calc(100vh - var(--navbar-height));
 }
 
 #tagline > div h1,
